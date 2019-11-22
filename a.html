@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<input id="name" type="text"  placeholder="Enter Your Name">
+<button id="btn" type="button"> Click me</button>
+<div id="div1"></div>
+    <script>
+        function fun1(div_name, data){
+            document.getElementById(div_name).innerText += data;
+        }
+        document.getElementById("btn").addEventListener('click', function() {
+          var user = document.getElementById("name");
+          var value = user.value.trim();
+          if(value)
+          fun1("div1", value+"\n");
+          user.value = "";
+        });
+    </script>
+
+</body>
+</html>
